@@ -1,1 +1,1 @@
-# tf-random
+Generate random pet name :)
