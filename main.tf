@@ -13,7 +13,7 @@ output "name" {
 }
 
 
-###Test 
+###Test hellow world
 resource "null_resource" "helloWorld" {
   provisioner "local-exec" {
     command = "echo Hello Mr. ${random_pet.server.id}"
