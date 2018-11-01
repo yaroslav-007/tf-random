@@ -1,18 +1,18 @@
-###Generating random pet
+###Generating random pet for the new hostname
 resource "random_pet" "server" {
   length = "3"
-  separator = "~"
+  separator = "-"
 }
 
-###Test output
+###Output of the generated hostname
 output "name" {
-  value = "${random_pet.server.id}"
+  value = "web-${random_pet.server.id}"
 }
 
 
-###Test hellow world
+###Generating output with hostname
 resource "null_resource" "helloWorld" {
   provisioner "local-exec" {
-    command = "echo Hello Mr. ${random_pet.server.id}"
+    command = "echo This generates name the following hostname  web-${random_pet.server.id}"
   }
 }
