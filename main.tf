@@ -1,10 +1,7 @@
-variable "jivotno" {
-  type    = "string"
-  default = "1"
-}
-
+###Generating random pet
 resource "random_pet" "server" {
-  length = "${var.jivotno}"
+  length = "3"
+  separator = "~"
 }
 
 ###Test output
@@ -19,4 +16,3 @@ resource "null_resource" "helloWorld" {
     command = "echo Hello Mr. ${random_pet.server.id}"
   }
 }
-
