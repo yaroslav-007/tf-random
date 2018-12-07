@@ -5,14 +5,18 @@ resource "random_pet" "server" {
 }
 
 ###Output of the generated hostname
-output "name" {
-  value = "web-${random_pet.server.id}"
-}
+#output "name" {
+#  value = "web-${random_pet.server.id}"
+#}
 
 
 ###Generating hostname output with echo command  
-resource "null_resource" "helloWorld" {
-  provisioner "local-exec" {
-    command = "echo This generates name the following hostname  web-${random_pet.server.id}"
-  }
+#resource "null_resource" "helloWorld" {
+#  provisioner "local-exec" {
+#    command = "echo This generates name the following hostname  web-${random_pet.server.id}"
+#  }
+#}
+
+output "name" {
+  value = "web-${random_pet.server.id}"
 }
